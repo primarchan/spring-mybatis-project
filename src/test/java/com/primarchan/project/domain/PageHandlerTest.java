@@ -11,8 +11,8 @@ public class PageHandlerTest {
         PageHandler pageHandler = new PageHandler(250,1);
         pageHandler.print();
         System.out.println("pageHandler" + pageHandler);
-        assertTrue(pageHandler.beginPage == 1);
-        assertTrue(pageHandler.endPage == 10);
+        assertTrue(pageHandler.getBeginPage() == 1);
+        assertTrue(pageHandler.getEndPage() == 10);
     }
 
     @Test
@@ -20,8 +20,8 @@ public class PageHandlerTest {
         PageHandler pageHandler = new PageHandler(250,11);
         pageHandler.print();
         System.out.println("pageHandler" + pageHandler);
-        assertTrue(pageHandler.beginPage == 11);
-        assertTrue(pageHandler.endPage == 20);
+        assertTrue(pageHandler.getBeginPage() == 11);
+        assertTrue(pageHandler.getEndPage() == 20);
     }
 
     @Test
@@ -29,7 +29,7 @@ public class PageHandlerTest {
         PageHandler pageHandler = new PageHandler(255,25);
         pageHandler.print();
         System.out.println("pageHandler" + pageHandler);
-        assertTrue(pageHandler.beginPage == 21);
-        assertTrue(pageHandler.endPage == 26);
+        assertTrue(pageHandler.getBeginPage() == 21);
+        assertTrue(pageHandler.getEndPage() == 26);
     }
 }
